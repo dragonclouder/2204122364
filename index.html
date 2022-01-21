@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>计算机导论</title>
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--兼容IE9请去点注释-->
+    
+    <style>
+        
+        h1{
+            text-align: center;
+            font-weight: 400;
+            font-family: fantasy;
+            font-style: italic;
+            text-shadow: 5px 5px 5px black, 0px 0px 2px black;
+            color: white;
+        }
+        
+        .connection{
+            font-size: 20px;
+            font-weight: 400;
+            font-family: fantasy;
+            font-style: italic;
+        }
+        
+        .item{
+            width:600px;
+            height:320px;
+        }
+        
+        .carousel-inner{
+            position:relative;
+            margin-left:27%;
+        }
+        
+        .myli{
+            position:relative;
+            margin-top: 30px;
+            margin-right:auto;
+            font-size: 20px;
+            font-weight: 600;
+            font-family: fantasy;
+        }
+        
+        .bookname{
+            text-align: center;
+            font-size: 30px;
+            font-weight: 600;
+            color:black
+        }
+        
+        .introduction{
+            
+            font-size: 20px;
+            font-weight: 400;
+            color:blue;
+        }
+        
+        .bookphoto{
+            width:250px;
+            height:350px;
+        }
+        
+        .shadow_css {
+			display: none;
+			position: absolute;
+			top: 0%;
+			left: 0%;
+			width: 100%;
+			height: 100%;
+			background-color: black;
+			z-index: 10;
+			/* 为mozilla firefox 设置透明度  */
+			-moz-opacity: 0.6;
+			/* 设置透明度 */
+			opacity: .60;
+			/* 为IE 设置透明度  */
+			filter: alpha(opacity=66);
+		}
+		
+		.window_css {
+			display: none;
+			position: absolute;
+			top: 20%;
+			left: 25%;
+			width: 40%;
+			height: 40%;
+			border: 3px solid honeydew;
+			background-color: aliceblue;
+			z-index: 11;
+		}
+
+    </style>
+    
+    <script>
+		/*当点击调用此方法后,将悬浮窗口显示出来,背景变暗*/
+		function displayWindow() {
+			document.getElementById("window").style.display = "block";
+			/*将背景变暗*/
+			document.getElementById("shadow").style.display = "block";
+		}
+
+		/*当点击调用此方法,将悬浮窗口和背景全部隐藏*/
+		function hideWindow() {
+			document.getElementById("window").style.display = "none";
+			document.getElementById("shadow").style.display = "none";
+		}
+	</script>
+    
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body background="img/bjt.jpg" style="background-repeat:no-repeat; background-attachment:fixed; background-size:100% 100% ">
+    
+    
+    <div id="window" class="window_css">
+		<a href="javascript:void(0)" onclick="hideWindow()">关闭窗口</a>
+        <br><br><br><br>
+        <p class="connection">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;电话:18272902771</p>
+        <p class="connection">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;邮箱:3236875189@qq.com</p>
+	</div>
+    
+     <!--出现悬浮窗口后,背景变暗-->
+	<div id="shadow" class="shadow_css"></div>
+    
+    <div>
+    
+         <div id="photoCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#photoCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#photoCarousel" data-slide-to="1"></li>
+            <li data-target="#photoCarousel" data-slide-to="2"></li>
+        </ol>
+        
+        <div class="carousel-inner">
+             <div class="item active">
+                 <a href="http://dean.xjtu.edu.cn/"><img src="img/carousel1.png"></a> 
+             </div>
+    
+             <div class="item">
+                 <a href="http://www.cs.xjtu.edu.cn/"><img src="img/carousel2.jpg"></a> 
+             </div>
+    
+              <div class="item">
+                 <a href="https://www.cas.cn/"><img src="img/carousel3.jpg"></a> 
+              </div> 
+        </div>
+        
+        <a class="left carousel-control" href="#photoCarousel" data-slide="prev">
+           <span class="glyphicon glyphicon-chevron-left"></span></a>
+        <a class="right carousel-control" href="#photoCarousel" data-slide="next">
+           <span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+         <nav class="navbar navbar-default">
+        
+        <!--导航栏-->
+        
+        <div id="mynav" class="navbar-collapse collapse">
+              <ul class="navbar-nav nav">
+                      
+                      <li><img src="img/XJTU.png"></li>
+                  
+                      <li class="myli"><a href="计算机学科各课程之间关系图.html">计算机学科各课程之间的关系图</a></li>
+
+                      <li class="myli"><a href="我对计算机专业的认识.html">我对计算机专业的认识</a></li>
+
+                      <li class="myli"><a href="我的学业规划.html">学业规划</a></li>
+                  
+                   
+                     
+                      <li class="myli">
+                          <a href="javascript:void(0)" onclick="displayWindow()">联系我</a>
+                               <div id="window" class="window_css">
+			                       <a href="javascript:void(0)" onclick="hideWindow()">关闭窗口</a>
+		                       </div>
+		                      
+                      </li> 
+                  
+ 
+              </ul>
+        </div>
+    </nav>
+    
+    
+    
+
+
+    
+         <div>
+        <table border="2">
+            <caption><h1>计算机各科资料</h1></caption>
+            
+            <tr>
+                <td>
+                    <table>
+                        
+                        <tr>
+                            <td rowspan="2">
+                                <a href="document/操作系统.pdf">
+                                    <img class="bookphoto" src="img/操作系统.png">
+                                </a>
+                            </td>
+                            <td class="bookname">《操作系统》</td>
+                        </tr>
+                        <tr>
+                             <td class="introduction">
+                                 <a href="document/操作系统.pdf">
+                                     简介：管理计算机硬件与软件资源的计算机程序。操作系统需要处理如管理与配置内存、决定系统资源供需的优先次序、控制输入设备与输出设备、操作网络与管理文件系统等基本事务。操作系统也提供一个让用户与系统交互的操作界面。
+                                 </a>
+                            </td>
+                        </tr>
+                    </table>                
+                </td>
+                
+                <td>
+                    <table>
+                        
+                        <tr>
+                            <td rowspan="2">
+                                <a href="document/程序设计学习指南.pdf">
+                                    <img class="bookphoto" src="img/程序设计基础.jpg">
+                                </a>
+                            </td>
+                            <td class="bookname">《程序设计基础》</td>
+                        </tr>
+                        <tr>
+                             <td class="introduction">
+                                 <a href="document/程序设计学习指南.pdf">
+                                 本课程是让学生了解和掌握c语言的一些基础知识，并且能够完成简易代码的编写，培养学生解决算法问题的思维，为学生的编码能力打下基础，为以后解决更难的问题做铺垫。
+                                 </a>
+                            </td>
+                        </tr>
+                    </table>                
+                </td>
+                
+            </tr>
+            
+            <tr>
+                <td>
+                    <table>
+                        
+                        <tr>
+                            <td rowspan="2">
+                                <a href="document/离散数学.pdf">
+                                    <img  class="bookphoto" src="img/离散数学.jpg">
+                                </a>
+                            </td>
+                            <td class="bookname">《离散数学》</td>
+                        </tr>
+                        <tr>
+                             <td class="introduction">
+                                 <a href="document/离散数学.pdf">
+                                     简介：研究离散量的结构及其相互关系的数学学科，是现代数学的一个重要分支。通过离散数学的学习，不但可以掌握处理离散结构的描述工具和方法，为后续课程的学习创造条件，而且可以提高抽象思维和严格的逻辑推理能力，为将来参与创新性的研究和开发工作打下坚实的基础。
+                                 </a>
+                            </td>
+                        </tr>
+                    </table>                
+                </td>
+                
+                <td>
+                    <table>
+                        
+                        <tr>
+                            <td rowspan="2">
+                                <a href="document/数据结构与算法.ppt">
+                                    <img  class="bookphoto" src="img/数据结构与算法.jpg">
+                                </a>
+                            </td>
+                            <td class="bookname">《数据结构与算法》</td>
+                        </tr>
+                        <tr>
+                            <td class="introduction">
+                                <a href="document/数据结构与算法.ppt">
+                                    简介：本课程以线性结构、树形结构和图结构三种数据结构为主线，从逻辑层面上分析各种结构的关系特征及抽象操作、在计算机中的存储表示及基本操作与实现，讨论各种结构的应用，详细介绍算法设计方法及应用。
+                                </a>
+                            </td>
+                        </tr>
+                    </table>                
+                </td>
+                
+            </tr>
+            
+        </table>
+    </div>
+        
+    </div>
+    
+
+    
+    <script src="jquery-3.0.0/jquery-3.0.0.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
